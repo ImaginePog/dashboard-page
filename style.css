@@ -1,8 +1,18 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --color-text: #505050;
+  --color-btn: #FD9235;
+}
+
+* { 
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 
+  font-size: 1rem;
+
+  font-family: 'Lato', sans-serif;;
 }
 
 
@@ -12,27 +22,182 @@ body {
 
   display: grid;
 
-  grid-template-rows: 1fr 9fr;
-  grid-template-columns: 1fr 8fr;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 0.8fr 4fr;
+
+  color: var(--color-text);
 
 }
+
+
+/* *************************** */
+
+/* TEMP */
+/* img {
+  height: 20px;
+  width: 20px;
+} */
+
+/* *************************** */
 
 /* HEADER */
-
 header {
   grid-area: 1 / 2 / 1 / 3;
-  background-color: rgb(248, 248, 248);
+  background-color: #F8EDEB;
+
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 2;
+
+  grid-template-areas: "";
+  row-gap: 20px;
+
+  padding: 12px 32px;
+
+  box-shadow: 0 0 10px gray;
+  z-index: 1;
 }
 
-aside {
-  background-color: aqua;
-
-  grid-area: 1 / 1 / 3 / 2;
+.search-bar-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
+.search-bar-container > input {
+  width: clamp(200px, 100%, 700px);
+  border-radius: 20px;
+  border: none;
+
+  background-color: #FCD5CE;
+  padding: 8px 8px;
+  
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
+
+.account-container {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+}
+
+.account-container > div {
+  display: flex;
+  align-items: center;
+}
+
+.account {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  background-color: gainsboro;
+}
+
+.account > img {
+  width: 100%;
+  height: auto;
+}
+
+.user-btns-container {
+  display: flex;
+
+  align-items: center;
+  justify-content: start;
+  gap: 24px;
+
+}
+
+.user-btns-container button {
+  border-radius: 24px;
+  border: none;
+
+  width: 5rem;
+  height: 2rem;
+  
+  font-weight: bold;
+  font-size: 1rem;
+
+  background-color: var(--color-btn);
+}
+
+.user-btns-container button:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
+
+.user-btns-container button:active {
+  opacity: 20%;
+}
+
+/* GREETING WALA */
+
+.greeting-container {
+  display: grid;
+  grid-template-columns: max-content auto;
+  column-gap: 14px;
+}
+
+.greeting-container > .profile-pic-container {
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: center;
+
+  background-color: gainsboro;
+  
+}
+
+.profile-pic-container  {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.profile-pic-container > img{
+  width: 100%;
+  height: auto;
+}
+
+.greeting-container > p {
+  display: flex;
+  align-items: center;
+
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.greeting-container > .hello {
+  font-size: 0.8rem;
+  align-self: self-end;
+}
+
+.hello + p {
+  align-self: self-start;
+}
+
+/* *************************** */
+
+/* *************************** */
+
+/* SIDEBAR */
+.side-bar {
+  background-color: #FD9235;
+  z-index: 2;
+
+  grid-area: 1 / 1 / -1 / 1;
+}
+
+/* *************************** */
 /* main contnent */
-
 main {
-  background-color: rgb(235, 233, 233);
+  background-color: #FEC5BB;
 }
 
+/* *************************** */
