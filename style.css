@@ -2,7 +2,7 @@
 
 :root {
   --color-text: #3a3a3a;
-  --color-btn: #FD9235;
+  --color-btn: #FEC5BB;
 }
 
 * { 
@@ -31,6 +31,11 @@ body {
 
 ul {
   list-style: none;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
 }
 
 /* *************************** */
@@ -77,10 +82,7 @@ header {
   
 }
 
-img {
-  height: 30px;
-  width: 30px;
-}
+
 
 .account-container {
   
@@ -196,7 +198,7 @@ img {
 
 /* SIDEBAR */
 .side-bar {
-  background-color: #FD9235;
+  background-color: #FEC5BB;
   z-index: 2;
 
   grid-area: 1 / 1 / -1 / 1;
@@ -261,7 +263,7 @@ a:visited {
 /* *************************** */
 /* main contnent */
 main {
-  background-color: #FEC5BB;
+  background-color: #E8E8E4;
 }
 
 /* *************************** */
